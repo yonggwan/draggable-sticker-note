@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Sticky Notes</title>
+</head>
+<link rel="stylesheet" href="./style.css">
+<body>
+    <div id="wrap" class="wrap">
+        <p class='help'>마우스 우클릭으로 메모를 추가합니다.</p>
+    </div>
+    <!-- 스티커 메모 -->
+    <template id="template">
+        <div class="memo">
+            <div class="header">
+                <h1 class="blind">메모장</h1>
+                <button class="btn_close"><span class="blind">닫기</span></button>
+            </div>
+            <div class="content">
+                <div class="textarea" contenteditable="true" style="width:200px; height:100px;"></div>
+                <button class="btn_size"><span class="blind">메모장 크기 조절</span></button>
+            </div>
+        </div>
+    </template>
+    <!-- // 스티커 메모 -->
+
+    <script src="./js/index.js"></script>
+</body>
+</html>

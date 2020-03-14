@@ -24,4 +24,4 @@ Fork this repository
 
 ## Demo <a name = "demo"></a>
 
-[프로젝트 보기](https://github.com/yonggwan/draggable-sticky-notes/edit/master/README.md)
+[데모](https://github.com/yonggwan/draggable-sticky-notes)
