@@ -9,7 +9,7 @@
 
 ## About <a name = "about"></a>
 
-Microsoft window os 위젯인 Sticky notes를 웹에서 구현했어요.
+Microsoft window os 위젯인 Sticky notes를 순수 자바스크립트로 웹에서 구현했어요.
 
 ## Getting Started <a name = "getting_started"></a>
 
@@ -24,4 +24,4 @@ Fork this repository
 
 ## Demo <a name = "demo"></a>
 
-[데모](https://github.com/yonggwan/draggable-sticky-notes)
+[Demo](https://yonggwan.github.io/draggable-sticky-notes/)
