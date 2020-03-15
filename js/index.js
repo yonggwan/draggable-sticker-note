@@ -9,16 +9,28 @@ class ZIndexManager {
   static _idx = 0;
   // z-index 자동증감값 반환
   static get zIndex () {
+    console.log(this._idx);
     return ++this._idx;
+  }
+  static set zIndex (idx) {
+    console.log(idx);
+    this._idx = idx;
   }
 };
 
+// 데이터 로컬스토리지에 저장
 const store = (container) => localStorage.setItem(LOCAL_STORAGE_KEY, container.innerHTML);
-const setStoredValues = (container) => container.innerHTML = localStorage.getItem(LOCAL_STORAGE_KEY);
+// 데이터 로컬스토리지로부터 추출하여 렌더링
+const setStoredValues = (container) => container.innerHTML = localStorage.getItem(LOCAL_STORAGE_KEY) || '';
 
 document.addEventListener('DOMContentLoaded', () => {
   const $wrap = document.getElementById('wrap');
-  setStoredValues($wrap);
+
+  const initialize = () => {
+    setStoredValues($wrap);
+    // stored된 메모아이템중 제일 높은 값의 z-index값을 초기값으로 설정
+    ZIndexManager.zIndex = Array.from(document.querySelectorAll('.memo')).reduce((acc, curr) => Math.max(acc, curr.style.zIndex), 0);
+  };
 
   /**
    * @description 새로운 Note Element를 반환
@@ -42,6 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   window.addEventListener('beforeunload', function (e) {
     e.preventDefault();
+    // 브라우저 탭종료시 메모 데이터 저장
     store($wrap);
     e.returnValue = '';
   });
@@ -89,6 +102,8 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     }
   });
+
+  initialize();
 });
 
 /**
