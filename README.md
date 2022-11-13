@@ -9,6 +9,9 @@ _웹으로 만드는 윈도우 스티커메모장_
 _Windows sticky notes for the web_
 
 
+![draggable-sticky-notes](docs/draggable-sticky-notes-giphy.gif)
+
+
 ## Table of Contents
 - [About](#about)
 - [Features](#features)
