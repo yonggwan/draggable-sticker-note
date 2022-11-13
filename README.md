@@ -16,11 +16,13 @@ _Windows sticky notes for the web_
 
 ## About <a name="about"></a>
 
-Windows 앱인 Microsoft sticky notes를 웹으로 만드는 예시를 보여줍니다.
+Windows 앱인 [Microsoft sticky notes][app-link]를 웹으로 만드는 예시를 보여줍니다.
 
 ## Features <a name="features"></a>
 - 마우스 우클릭을 통해 새로운 스티커를 생성할 수 있습니다.
 - 마우스 드래그를 통해 스티커의 위치를 이동할 수 있습니다.
+- ~~스티커의 테마를 설정할 수 있습니다.~~ (*Next feature*)
+- ~~생성된 스티커를 리스팅할 수 있습니다.~~ (*Next feature*)
 > 데이터의 보존수명은 브라우저의 [localStorage][localstorage] Lifecycle에 기반합니다.
 
 ## Getting Started <a name = "getting_started"></a>
